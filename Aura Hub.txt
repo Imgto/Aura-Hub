@@ -117,7 +117,7 @@ Pet:AddButton({
 Tab:AddButton({
 	Name = "Quantum Hub",
 	Callback = function()
-		loadstring(game:HttpGet('https://pastebin.com/0JESGubz'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Imgto/Aura-Hub/main/Pressure.txt'))()
 	end    
 })
 Pet:AddButton({
