@@ -1,4 +1,5 @@
 print("Aura Hub executed!")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Imgto/Aura-Hub/main/CelertInjectedLogo.lua'))()
 local p = Instance.new("Part")
 p.Position = Vector3.new(-34, 1494, -1120)
 p.Size = Vector3.new(100, 10, 100)
@@ -16,6 +17,11 @@ local Window = OrionLib:MakeWindow({
 	HidePremium = false,
 	SaveConfig = true,
 	ConfigFolder = "AuraHub"
+})
+local others = Window:MakeTab({
+	Name = "Universal",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 local Tab = Window:MakeTab({
 	Name = "Pressure",
@@ -50,7 +56,7 @@ local arsenal = Window:MakeTab({
 arsenal:AddButton({
 	Name = "Shivam",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Jajkong/best-arsenal-script/main/arsenal.txt", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Jajkong/best-arsenal-script/main/arsenal.txt"))()
 	end    
 })
 arsenal:AddButton({
@@ -115,7 +121,7 @@ Pet:AddButton({
 	end    
 })
 Tab:AddButton({
-	Name = "Quantum Hub",
+	Name = "Pressure script",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Imgto/Aura-Hub/main/Pressure.txt'))()
 	end    
@@ -139,10 +145,29 @@ local credits = Window:MakeTab({
 })
 credits:AddParagraph("Credits to ItzCleyy", "Best developer")
 credits:AddParagraph("Also thanks to all developers thats helps me")
-local others = Window:MakeTab({
-	Name = "Universal",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+others:AddSlider({
+	Name = "WalkSpeed🏃‍♂️",
+	Min = 16,
+	Max = 1000,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+    	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+	end    
+})
+others:AddSlider({
+	Name = "JumpPower🦘",
+	Min = 50,
+	Max = 1000,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+	end    
 })
 others:AddButton({
 	Name = "Infinite yield",
@@ -161,4 +186,10 @@ others:AddButton({
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
 	end    
+})
+others:AddButton({
+	Name = "Krnl Executor",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/FreezyWare/Remake-Executor/main/Executor/Krnl-Legacy.Lua"))()
+  	end    
 })
