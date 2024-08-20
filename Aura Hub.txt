@@ -126,6 +126,12 @@ Tab:AddButton({
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Imgto/Aura-Hub/main/Pressure.txt'))()
 	end    
 })
+Tab:AddButton({
+	Name = "Invincibility (God Mode)",
+	Callback = function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Pressure-*-Mode-15992"))()
+	end    
+})
 Pet:AddButton({
 	Name = "Zap hub (Solara)",
 	Callback = function()
@@ -147,7 +153,7 @@ credits:AddParagraph("Credits to ItzCleyy", "Best developer")
 credits:AddParagraph("Also thanks to all developers thats helps me")
 others:AddSlider({
 	Name = "WalkSpeed🏃‍♂️",
-	Min = 16,
+	Min = 30,
 	Max = 1000,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
@@ -192,4 +198,10 @@ others:AddButton({
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/FreezyWare/Remake-Executor/main/Executor/Krnl-Legacy.Lua"))()
   	end    
+})
+OrionLib:MakeNotification({
+	Name = "Aura Hub",
+	Content = "🎗️The best🎗️",
+	Image = "rbxassetid://4483345998",
+	Time = 5
 })
