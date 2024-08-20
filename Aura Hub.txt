@@ -1,4 +1,5 @@
 print("Aura Hub executed!")
+print("most of scripts are exlusive"}
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Imgto/Aura-Hub/main/CelertInjectedLogo.lua'))()
 local p = Instance.new("Part")
 p.Position = Vector3.new(-34, 1494, -1120)
