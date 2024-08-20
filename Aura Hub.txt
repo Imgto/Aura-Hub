@@ -147,7 +147,7 @@ credits:AddParagraph("Credits to ItzCleyy", "Best developer")
 credits:AddParagraph("Also thanks to all developers thats helps me")
 others:AddSlider({
 	Name = "WalkSpeed🏃‍♂️",
-	Min = 16,
+	Min = 30,
 	Max = 1000,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
